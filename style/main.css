@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Pacifico&family=Roboto:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-image: url(/images/intro.jpg);
+}
+
+header{
+    width: 100%;
+    height: 160px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 20px 20px 0px rgba(0, 0, 0, 0.2);
+    background: #e78182;
+    color: #ffffff;
+}
+
+.input-h1 > h1 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    
+    font-family: 'Pacifico', cursive;
+    font-weight: 900;
+}
+
+.row{
+    display: flex;
+    position: relative;
+}
+
+input{
+    width: 100%;
+    flex: 1;
+    padding: 10px 20px;
+    font-size: 17px;
+
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button{
+    position: absolute;
+    font-family: 'Pacifico', cursive;
+    font-size: 17px;
+    right: 0;
+    border: none;
+    border-bottom: 3px  #fce38a solid;
+    border-color: black;
+    padding: 5px 20px;
+    background-color: #FF7640;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #d56801;
+}
