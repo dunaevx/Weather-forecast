@@ -11,16 +11,60 @@
         <div class="input-h1">
             <h1>Weather forecast</h1>
             <div class="row">
-                <input type="text" placeholder="Enter the name of the city">
-                <button>View</button>
+                <input id="input-city" type="text" placeholder="Enter the name of the city">
+                <button id="btn-view">View</button>
             </div>
         </div>
     </header>
     <div class="content">
-
+        <div class="row-1">
+            <h2>London</h2>
+            <span>UK</span>
+            <div class="row-1_colum">
+                <p>11℃</p>
+                <img class="img-weather" src="images/rainy-day.png" alt="">
+            </div>
+            <p>Clear</p>
+        </div>
+        <div class="row-2">
+            <div class="row-2_cards row-2_card-1">
+               <div class="procent-card-1">
+                    <div id="number1">
+                        
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                        <defs>
+                        <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#FD7334" />
+                            <stop offset="100%" stop-color="#D73A33" />
+                        </linearGradient>
+                        </defs>
+                    <circle class="circle1" cx="80" cy="80" r="50" stroke-linecap="round" />
+                    </svg>
+               </div>
+               <p class="h1">Humidity</p>
+            </div>
+            <div class="row-2_cards row-2_card-2">
+                <div class="procent-card-1">
+                     <div id="number2">
+                         
+                     </div>
+                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                         <defs>
+                         <linearGradient id="GradientColor">
+                             <stop offset="0%" stop-color="#FD7334" />
+                             <stop offset="100%" stop-color="#D73A33" />
+                         </linearGradient>
+                         </defs>
+                     <circle class="circle2" cx="80" cy="80" r="50" stroke-linecap="round" />
+                     </svg>
+                </div>
+                <p class="h1">Cloudiness</p>
+             </div>
+        </div>
     </div>
     <footer>
-
+        
     </footer>
     <script src="js/main.js"></script>
 </body>

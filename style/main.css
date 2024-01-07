@@ -5,11 +5,20 @@
     margin: 0;
     padding: 0;
 
-    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 body{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
     background-image: url(/images/intro.jpg);
+    font-weight: 600;
 }
 
 header{
@@ -20,7 +29,7 @@ header{
     align-items: center;
     justify-content: center;
     box-shadow: 1px 20px 20px 0px rgba(0, 0, 0, 0.2);
-    background: #e78182;
+    background: #00000046;
     color: #ffffff;
 }
 
@@ -42,11 +51,12 @@ input{
     flex: 1;
     padding: 10px 20px;
     font-size: 17px;
+    box-shadow: 1px 20px 20px 0px rgba(0, 0, 0, 0.2);
+
 
     border: none;
     outline: none;
     border-radius: 10px;
-    cursor: pointer;
 }
 
 button{
@@ -66,4 +76,123 @@ button{
 
 button:hover{
     background-color: #d56801;
+}
+
+.content{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.row-1{
+    display: flex;
+    flex-direction: column;
+    
+    width: 240px;
+    height: 280px;
+    /* background: linear-gradient(135deg, #e78182, #edb487); */
+    background-color: #00000060;
+    border-radius: 15px;
+    box-shadow: 1px 20px 20px 0px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+    padding: 20px;
+}
+
+.row-1_colum{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+
+    position: relative;
+}
+
+.row-1_colum > p{
+    font-size: 54px;
+}
+
+.row-1 > p{
+    margin-top: auto;
+}
+
+.img-weather{
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    width: 150px;
+}
+
+
+.row-2_card-2{
+    margin-top: 20px;
+}
+
+.row-2_cards{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 290px;
+    height: 150px;
+    /* background: linear-gradient(135deg, #e78182, #edb487); */
+    background-color: #00000060;
+    border-radius: 15px;
+    box-shadow: 1px 20px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 15px;
+    stroke-dasharray:307;
+    stroke-dashoffset: 307;
+    
+}
+
+.circle1{
+    animation: anim1 1s linear forwards; 
+}
+
+.circle2{
+    animation: anim2 1s linear forwards; 
+}
+
+@keyframes anim1 {
+    100%{
+        stroke-dashoffset: 107;
+    }
+}
+
+@keyframes anim2 {
+    100%{
+        stroke-dashoffset: 46;
+    }
+}
+
+.procent-card-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    margin-left: -65px;
+    width: 50%;
+    height: 100%;
+}
+
+svg{
+    position: absolute;
+}
+
+
+
+
+
+
+footer{
+    background-color: #fce38a2f;
+    padding: 10px;
+    margin-top: auto;
 }
