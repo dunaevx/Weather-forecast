@@ -14,10 +14,13 @@ html, body {
 }
 
 body{
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  */
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
-    background-image: url(/images/intro.jpg);
+    background-image: url(/images/sky-background-min.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-weight: 600;
 }
 
@@ -28,8 +31,8 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 1px 20px 20px 0px rgba(0, 0, 0, 0.2);
-    background: #00000046;
+    box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.1);
     color: #ffffff;
 }
 
@@ -65,17 +68,18 @@ button{
     font-size: 17px;
     right: 0;
     border: none;
-    border-bottom: 3px  #fce38a solid;
+    border-bottom: 1px  #fce38a solid;
     border-color: black;
     padding: 5px 20px;
-    background-color: #FF7640;
+    background-color: #1f5ae4;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
+    transition: .5s;
 }
 
 button:hover{
-    background-color: #d56801;
+    background-color: #06a0ff;
 }
 
 .content{
@@ -93,8 +97,8 @@ button:hover{
     width: 240px;
     height: 280px;
     /* background: linear-gradient(135deg, #e78182, #edb487); */
-    background: linear-gradient(135deg, #e46769, #eba36c);
-    /* background-color: #00000060; */
+    /* background: linear-gradient(135deg, #e46769, #eba36c); */
+    background-color: #58b1ff;
     border-radius: 15px;
     box-shadow: 1px 20px 20px 0px rgba(0, 0, 0, 0.2);
     margin-right: 20px;
@@ -124,6 +128,9 @@ button:hover{
     width: 150px;
 }
 
+#number1, #number2{
+    font-size: 24px;
+}
 
 .row-2_card-2{
     margin-top: 20px;
@@ -137,7 +144,8 @@ button:hover{
     position: relative;
     width: 290px;
     height: 150px;
-    background: linear-gradient(135deg, #e46769, #eba36c);
+    /* background: linear-gradient(135deg, #e46769, #eba36c); */
+    background-color: #58b1ff;
     border-radius: 15px;
     box-shadow: 1px 20px 20px 0px rgba(0, 0, 0, 0.2);
 }
