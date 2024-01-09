@@ -168,14 +168,14 @@ circle{
 }
 
 @keyframes anim1 {
-    100%{
-        stroke-dashoffset: 107;
+    to {
+        stroke-dashoffset: var(--custom-dashoffset-One, 307);
     }
 }
 
 @keyframes anim2 {
-    100%{
-        stroke-dashoffset: 46;
+    to {
+        stroke-dashoffset: var(--custom-dashoffset-Sec, 307);
     }
 }
 
