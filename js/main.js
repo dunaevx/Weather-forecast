@@ -10,7 +10,13 @@ const dashoffsetSec = (100 - 85) / 100 * 307; // чилсо 85 заменитс�
 const timeCircleOne = 1000/50;  // чилсо 50 заменится на переменную
 const timeCircleSec = 1000/85;  // чилсо 85 заменится на переменную
 
-document.addEventListener('DOMContentLoaded', () => {
+window.onload = () =>{
+  preloader.classList.add('preloader--hidden')
+  proc1();
+  proc2();
+}
+
+function proc1(){
   let num1 = document.getElementById('number1');
   let counter1 = 0;
 
@@ -24,9 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }, timeCircleOne)
 
-});
+  let circleOneElement = document.querySelector('.circle1');
+  circleOneElement.style.animation = 'anim1 1s linear forwards';
 
-document.addEventListener('DOMContentLoaded', () => {
+}
+
+function proc2(){
   let num2 = document.getElementById('number2');
   let counter2 = 0;
 
@@ -40,4 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }, timeCircleSec)
 
-});
+  let circleTwoElement = document.querySelector('.circle2');
+  circleTwoElement.style.animation = 'anim2 1s linear forwards';
+  
+};

@@ -160,11 +160,9 @@ circle{
 }
 
 .circle1{
-    animation: anim1 1s linear forwards; 
 }
 
 .circle2{
-    animation: anim2 1s linear forwards; 
 }
 
 @keyframes anim1 {
