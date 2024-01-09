@@ -137,7 +137,6 @@ button:hover{
 }
 
 .row-2_cards{
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -156,7 +155,7 @@ circle{
     stroke-width: 15px;
     stroke-dasharray:307;
     stroke-dashoffset: 307;
-    
+    transform: rotate(2deg);
 }
 
 .circle1{
