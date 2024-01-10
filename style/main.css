@@ -22,6 +22,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     font-weight: 600;
+    
 }
 
 header{
@@ -137,7 +138,6 @@ button:hover{
 }
 
 .row-2_cards{
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -156,15 +156,13 @@ circle{
     stroke-width: 15px;
     stroke-dasharray:307;
     stroke-dashoffset: 307;
-    
+    transform: rotate(2deg);
 }
 
 .circle1{
-    animation: anim1 1s linear forwards; 
 }
 
 .circle2{
-    animation: anim2 1s linear forwards; 
 }
 
 @keyframes anim1 {
