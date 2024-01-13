@@ -14,11 +14,15 @@ html, body {
 }
 
 body{
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  */
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
-    background-image: url(/images/intro.jpg);
+    background-image: url(/images/sky-background-min.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-weight: 600;
+    
 }
 
 header{
@@ -28,8 +32,8 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 1px 20px 20px 0px rgba(0, 0, 0, 0.2);
-    background: #00000046;
+    box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.1);
     color: #ffffff;
 }
 
@@ -65,17 +69,18 @@ button{
     font-size: 17px;
     right: 0;
     border: none;
-    border-bottom: 3px  #fce38a solid;
+    border-bottom: 1px  #fce38a solid;
     border-color: black;
     padding: 5px 20px;
-    background-color: #FF7640;
+    background-color: #1f5ae4;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
+    transition: .5s;
 }
 
 button:hover{
-    background-color: #d56801;
+    background-color: #06a0ff;
 }
 
 .content{
@@ -93,8 +98,8 @@ button:hover{
     width: 240px;
     height: 280px;
     /* background: linear-gradient(135deg, #e78182, #edb487); */
-    background: linear-gradient(135deg, #e46769, #eba36c);
-    /* background-color: #00000060; */
+    /* background: linear-gradient(135deg, #e46769, #eba36c); */
+    background-color: #58b1ff;
     border-radius: 15px;
     box-shadow: 1px 20px 20px 0px rgba(0, 0, 0, 0.2);
     margin-right: 20px;
@@ -124,20 +129,23 @@ button:hover{
     width: 150px;
 }
 
+#number1, #number2{
+    font-size: 24px;
+}
 
 .row-2_card-2{
     margin-top: 20px;
 }
 
 .row-2_cards{
-    
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     width: 290px;
     height: 150px;
-    background: linear-gradient(135deg, #e46769, #eba36c);
+    /* background: linear-gradient(135deg, #e46769, #eba36c); */
+    background-color: #58b1ff;
     border-radius: 15px;
     box-shadow: 1px 20px 20px 0px rgba(0, 0, 0, 0.2);
 }
@@ -148,26 +156,24 @@ circle{
     stroke-width: 15px;
     stroke-dasharray:307;
     stroke-dashoffset: 307;
-    
+    transform: rotate(2deg);
 }
 
 .circle1{
-    animation: anim1 1s linear forwards; 
 }
 
 .circle2{
-    animation: anim2 1s linear forwards; 
 }
 
 @keyframes anim1 {
-    100%{
-        stroke-dashoffset: 107;
+    to {
+        stroke-dashoffset: var(--custom-dashoffset-One, 307);
     }
 }
 
 @keyframes anim2 {
-    100%{
-        stroke-dashoffset: 46;
+    to {
+        stroke-dashoffset: var(--custom-dashoffset-Sec, 307);
     }
 }
 
@@ -195,4 +201,35 @@ footer{
     background-color: #fce38a2f;
     padding: 10px;
     margin-top: auto;
+}
+
+
+@media only screen and (max-width: 667px) {
+    /* Стили для мобильных устройств */
+
+    body{
+        font-size: 18px;
+    }
+
+    .input-h1{
+        font-size: 0.8rem;
+    }
+
+    .content{
+        flex-direction: column;
+        align-items: center;
+        padding: auto;
+    }
+
+    .row-1{
+        margin: 0px 0px 20px 0px;
+    }
+
+    .row-2_cards{
+        width: 280px;
+    }
+
+    .svg2, #number2{
+        margin-left: 10px;
+    }
 }
