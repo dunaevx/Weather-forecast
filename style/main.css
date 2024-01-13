@@ -157,6 +157,7 @@ circle{
     stroke-dasharray:307;
     stroke-dashoffset: 307;
     transform: rotate(2deg);
+    transition:all 1s;
 }
 
 .circle1{

@@ -1,5 +1,9 @@
 // let Key = ce822fbd27b54e0c8b394753240701
-
+window.onload = () =>{
+  preloader.classList.add('preloader--hidden')
+  proc1();
+  proc2();
+}
 // http://api.weatherapi.com/v1/current.json?key=ce822fbd27b54e0c8b394753240701&q=London
 const btnView = document.getElementById('btn_view');
 // const apiKey = 'ce822fbd27b54e0c8b394753240701'; 
@@ -17,7 +21,9 @@ btnView.addEventListener('click', (e) => {
       console.log(data.location.name);
       console.log(data.location.country);
       console.log(data.current.cloud);
+      let cloud = data.current.cloud;
       console.log(data.current.humidity);
+      let humidity = data.current.humidity;
       console.log(data.current.temp_c);
       console.log(data.current.condition.text);
       
@@ -26,43 +32,41 @@ btnView.addEventListener('click', (e) => {
       let nameCountry = document.getElementById('name-country');
       let cTemp = document.getElementById('c-temp');
       let valueText = document.getElementById('value-text');
+      let imgWeather = document.querySelector('.img-weather');
 
+      imgWeather.src = data.current.condition.icon;
       nameCity.textContent = data.location.name;
       nameCountry.textContent = data.location.country;
-      cTemp.textContent = data.current.temp_c + '℃';
+      cTemp.textContent = Math.floor(data.current.temp_c) + '℃';
       valueText.textContent = data.current.condition.text;
+
+      const dashoffsetOne = (100 - humidity) / 100 * 307; 
+      document.documentElement.style.setProperty('--custom-dashoffset-One', dashoffsetOne);
+      const timeCircleOne = 1000/humidity; 
+
+      const dashoffsetSec = (100 - cloud) / 100 * 307; 
+      document.documentElement.style.setProperty('--custom-dashoffset-Sec', dashoffsetSec);
+      const timeCircleSec = 1000/cloud;
+
+      proc1(humidity, timeCircleOne);
+      proc2(cloud, timeCircleSec);
     })
     .catch(error => {
-      console.error('Ошибка при получении данных о погоде:', error);
+      alert('Ошибка при получении данных о погоде:', error);
     });
 });
 
 
-let humidity = 15;
-let cloud = 85;
 
-const dashoffsetOne = (100 - humidity) / 100 * 307;  // чилсо 50 заменится на переменную
-        document.documentElement.style.setProperty('--custom-dashoffset-One', dashoffsetOne);
-const dashoffsetSec = (100 - cloud) / 100 * 307; // чилсо 85 заменится на переменную
-        document.documentElement.style.setProperty('--custom-dashoffset-Sec', dashoffsetSec);
+function proc1(humidity, timeCircleOne){
 
-const timeCircleOne = 1000/humidity;  // чилсо 50 заменится на переменную
-const timeCircleSec = 1000/cloud;  // чилсо 85 заменится на переменную
-
-window.onload = () =>{
-  preloader.classList.add('preloader--hidden')
-  proc1();
-  proc2();
-}
-
-function proc1(){
   let num1 = document.getElementById('number1');
   let counter1 = 0;
 
-  setInterval(()=>{
+  let interval1 = setInterval(()=>{
     if(counter1 === humidity){  // чилсо 50 заменится на переменную
       clearInterval()
-    }else{
+    }else if(counter1 <= humidity){
       counter1 += 1;
       num1.innerHTML = counter1 + "%";
     }
@@ -74,14 +78,16 @@ function proc1(){
 
 }
 
-function proc2(){
+function proc2(cloud, timeCircleSec){
+
   let num2 = document.getElementById('number2');
   let counter2 = 0;
 
   setInterval(()=>{
     if(counter2 === cloud){  // чилсо 85 заменится на переменную
       clearInterval()
-    }else{
+      
+    }else if(counter2 <= cloud){
       counter2 += 1;
       num2.innerHTML = counter2 + "%";
     }
