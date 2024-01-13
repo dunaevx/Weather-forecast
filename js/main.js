@@ -1,6 +1,43 @@
 // let Key = ce822fbd27b54e0c8b394753240701
 
 // http://api.weatherapi.com/v1/current.json?key=ce822fbd27b54e0c8b394753240701&q=London
+const btnView = document.getElementById('btn_view');
+// const apiKey = 'ce822fbd27b54e0c8b394753240701'; 
+// const url = 'http:api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}';
+
+btnView.addEventListener('click', (e) => {
+  const city = document.getElementById('input-city').value.trim();
+  const apiKey = 'ce822fbd27b54e0c8b394753240701';
+  const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
+
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      // Обработка полученных данных
+      console.log(data.location.name);
+      console.log(data.location.country);
+      console.log(data.current.cloud);
+      console.log(data.current.humidity);
+      console.log(data.current.temp_c);
+      console.log(data.current.condition.text);
+      
+      //  данные для отображения информации о погоде на веб-странице
+      let nameCity = document.getElementById('name-city');
+      let nameCountry = document.getElementById('name-country');
+      let cTemp = document.getElementById('c-temp');
+      let valueText = document.getElementById('value-text');
+
+      nameCity.textContent = data.location.name;
+      nameCountry.textContent = data.location.country;
+      cTemp.textContent = data.current.temp_c + '℃';
+      valueText.textContent = data.current.condition.text;
+    })
+    .catch(error => {
+      console.error('Ошибка при получении данных о погоде:', error);
+    });
+});
+
+
 let humidity = 15;
 let cloud = 85;
 
