@@ -15,6 +15,7 @@ html, body {
 
 html{
     background-image: radial-gradient(circle, #3173d6, #0f8de6, #06a5f1, #30bdf9, #58d4ff);
+    z-index: -10000;
 }
 
 body{
