@@ -12,7 +12,7 @@ const btnView = document.getElementById('btn_view');
 btnView.addEventListener('click', (e) => {
   const city = document.getElementById('input-city').value.trim();
   const apiKey = 'ce822fbd27b54e0c8b394753240701';
-  const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
+  const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
 
   fetch(apiUrl)
     .then(response => response.json())
